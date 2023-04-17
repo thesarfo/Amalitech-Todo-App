@@ -12,6 +12,9 @@ This project consists of a responsive TodoApp with many functionalities as liste
 - Drag and drop to reorder items on the list
 - Build this project as a full-stack application
 
+<h3>Deployment Link</h3>
+https://todo-app-one-brown.vercel.app/
+
 <!-- The project idea and design was proposed by Frontend Mentor and developed by me. -->
 
 ## Screenshot
