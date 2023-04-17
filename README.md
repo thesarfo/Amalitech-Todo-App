@@ -1,4 +1,4 @@
-# Amalitech TodoApp
+# TodoApp
 
 This project consists of a responsive TodoApp with many functionalities as listed below:
 
