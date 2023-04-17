@@ -32,6 +32,3 @@ https://todo-app-one-brown.vercel.app/
 
 - [@thesarfo](https://github.com/thesarfo)
 
-<!-- ## Links
-
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-vitor-miranda-8b445222b) -->
