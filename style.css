@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-bright-blue: hsl(220, 98%, 61%);
+
+  /*------LIGHT THEME-------*/
+  --color-vlgray: hsl(0, 0%, 98%);
+  --color-vlgrayish-blue: hsl(236, 33%, 92%);
+  --color-lgrayish-blue: hsl(233, 11%, 84%);
+  --color-dark-grayish-blue: hsl(236, 9%, 61%);
+  --color-vdark-grayish-blue: hsl(235, 19%, 35%);
+
+
+  /*------DARK THEME-------*/
+  --color-vdark-blue: hsl(235, 21%, 11%);
+  --color-vdark-desaturated-blue: hsl(235, 24%, 19%);
+  --color-lgrayish-blue: hsl(234, 39%, 85%);
+  --color-lgrayish-blue-hover: hsl(236, 33%, 92%);
+  --color-dgrayish-blue: hsl(234, 11%, 52%);
+  --color-vdark-grayish-blue: hsl(233, 14%, 35%);
+  --color-vdark-grayish-blue2: hsl(237, 14%, 26%);
+
+  /*------FONT FAMILY-------*/
+  --font-family: 'Josefin Sans', sans-serif;
+
+}
+
+li {
+  list-style: none;
+}
+
+input[type=checkbox] {
+  appearance: none;
+  position: relative;
+}
+
+input[type=checkbox]::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: 0;
+  border: 1px solid var(--color-vdark-grayish-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
+input[type=checkbox]:checked::before {
+  content: '';
+  background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: 0;
+  border-radius: 50%;
+  position: absolute;
+}
+
+input[type=checkbox]:checked::after {
+  content: '';
+  background: url(images/icon-check.svg) center center no-repeat;
+  width: 10px;
+  height: 10px;
+  top: -.5rem;
+  left: .5rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+button {
+  background: none;
+  border: none;
+  color: var(--color-vdark-grayish-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--font-family);
+  background-color: var(--color-vdark-blue);
+  background-image: url(images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 30vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 560px;
+  padding: 0 2rem;
+}
+
+.header {
+  padding: 5rem 0;
+}
+
+.header,
+.todo__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: #fff;
+  letter-spacing: 2rem;
+}
+
+.bg-toggle {
+  width: 26px;
+  height: 26px;
+  background-image: url(images/icon-sun.svg);
+}
+
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-vdark-desaturated-blue);
+}
+
+.todo__form {
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  background-color: var(--color-vdark-desaturated-blue);
+}
+
+.todo__form input[type=text] {
+  flex-basis: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-dark-grayish-blue);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+.todo__form input::placeholder {
+  color: var(--color-dark-grayish-blue);
+  font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.todo__list--item {
+  flex-basis: 100%;
+
+  display: flex;
+  column-gap: 2em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: 1px solid var(--color-vdark-grayish-blue);
+}
+
+.todo__list .todo__list--item > div input:checked + p {
+  color: var(--color-vdark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.todo__list--item div,
+.todo__form {
+  display: flex;
+  align-items: center;
+  column-gap: 2em;
+}
+
+.todo__list .todo__list--item div p {
+  color: var(--color-lgrayish-blue);
+  padding-top: 5px;
+}
+
+.todo__other {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  background-color: var(--color-vdark-desaturated-blue);
+}
+
+.todo__other--total {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  color: var(--color-vdark-grayish-blue);
+  font-size: 1.6rem;
+  padding-left: 2rem;
+}
+
+.todo__other--clear {
+  padding-right: 2rem;
+}
+
+.todo__other--btns {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.todo__other--btns * {
+  font-size: 1.5rem;
+}
+
+.todo{
+  box-shadow: 0px 10px 30px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hint p {
+  font-weight: 700;
+  padding-top: 5rem;
+  text-align: center;
+  color: var(--color-vdark-grayish-blue);
+  font-size: 1.4rem;
+}
+
+/*--------------- LIGHT THEME ---------------*/
+
+.light,
+.light .todo__form,
+.light .todo__list,
+.light .todo__other {
+  background-color: var(--color-vlgray);
+}
+
+.light {
+  background-image: url(images/bg-desktop-light.jpg);
+}
+
+.light .bg-toggle {
+  width: 26px;
+  height: 26px;
+  background-image: url(images/icon-moon.svg);
+}
+
+.light .todo__form input[type=text]::placeholder {
+  color: var(--color-dgrayish-blue);
+}
+
+.light .todo__list li div p {
+  color: var(--color-vdark-grayish-blue);
+}
+
+.light .todo__list--item {
+  border-bottom: 1px solid var(--color-vlgrayish-blue);
+}
+
+.light .todo__list .todo__list--item > div input:checked + p {
+  color: var(--color-lgrayish-blue);
+  text-decoration: line-through;
+}
+
+.light .todo__other button,
+.light .todo__other p,
+.light .todo__other span {
+  color: var(--color-dark-grayish-blue);
+}
+
+.light .todo__other .todo__other--btns__all {
+  color: var(--color-bright-blue);
+}
+
+.light .hint > p {
+  color: var(--color-dark-grayish-blue);
+}
+
+/*--------------- MEDIA QUERIES ---------------*/
+@media screen and (max-width: 560px) {
+  .todo__other--btns {
+    order: 3;
+    flex: 1 1 100%;
+    padding: 2rem 0 0 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-dark-grayish-blue);
+  }
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color: var(--color-dgrayish-blue);
+}
+
+.attribution a {
+  color: var(--color-dark-grayish-blue);
+}
