@@ -191,6 +191,12 @@ body {
   background-color: var(--color-vdark-desaturated-blue);
 }
 
+.todo__other--btns__all:hover,
+.todo__other--btns__active:hover,
+.todo__other--btns__completed:hover {
+  color: var(--color-bright-blue);
+}
+
 .todo__other--total {
   display: flex;
   align-items: center;
