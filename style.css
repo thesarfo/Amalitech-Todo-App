@@ -303,3 +303,39 @@ body {
 .attribution a {
   color: var(--color-dark-grayish-blue);
 }
+
+/*------- Individual element highlighting -------*/
+.todo__other--btns__all:hover,
+.todo__other--btns__active:hover,
+.todo__other--btns__completed:hover,
+.todo__other--clear:hover,
+.todo__other--btns__all.active,
+.todo__other--btns__active.active,
+.todo__other--btns__completed.active,
+.todo__other--clear.active {
+  color: var(--color-bright-blue);
+}
+
+/*------- Light mode hover and active styles -------*/
+.light .todo__other--btns__all:hover,
+.light .todo__other--btns__active:hover,
+.light .todo__other--btns__completed:hover,
+.light .todo__other--clear:hover,
+.light .todo__other--btns__all.active,
+.light .todo__other--btns__active.active,
+.light .todo__other--btns__completed.active,
+.light .todo__other--clear.active {
+  color: var(--color-bright-blue);
+}
+
+/*------- Dark mode hover and active styles -------*/
+.dark .todo__other--btns__all:hover,
+.dark .todo__other--btns__active:hover,
+.dark .todo__other--btns__completed:hover,
+.dark .todo__other--clear:hover,
+.dark .todo__other--btns__all.active,
+.dark .todo__other--btns__active.active,
+.dark .todo__other--btns__completed.active,
+.dark .todo__other--clear.active {
+  color: var(--color-bright-blue);
+}
